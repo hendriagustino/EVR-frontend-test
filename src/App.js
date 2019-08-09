@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Header from './components/Header/Header';
+import Header from './components/UI/Header/Header';
 
 import Home from './components/Home/Home';
 import Seller from './components/Seller/Seller';
@@ -24,6 +24,7 @@ class App extends Component{
     return(
       <div className="App">
         <Header/>
+        <br/>
         {route}
         
         

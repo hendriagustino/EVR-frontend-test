@@ -1,5 +1,5 @@
 import React from 'react';
-import EnvLogo from './../../img/envlogo.png';
+import EnvLogo from './../../../img/envlogo.png';
 import Navigation from './../Navigation/Navigation';
 
 const Header = () => {
