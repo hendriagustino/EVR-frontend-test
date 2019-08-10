@@ -8,10 +8,24 @@ const initialState ={
     ]
 };
 
+const deleteProduct = (state, action) =>{
+
+    let newProducts = state.products.filter(product=>{
+        return product.id !== action.id
+    });
+    
+    return{
+        ...state,
+        products: [
+            ...newProducts
+        ]
+    }
+}
 
 const reducer = (state = initialState, action) =>{
     switch(action.type){
-        
+        case actionTypes.DELETE_PRODUCT:
+            return deleteProduct(state, action);
     default:
         return state;
     }

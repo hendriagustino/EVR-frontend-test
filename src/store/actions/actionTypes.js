@@ -1,0 +1,3 @@
+export const DELETE_PRODUCT = 'DELETE_PRODUCT';
+
+export const DELETE_SELLER = 'DELETE_SELLER';

@@ -7,7 +7,7 @@ import Seller from './components/Seller/Seller';
 import Products from './components/Products/Products';
 import About from './components/About/About';
 
-import { Route, Switch, withRouter} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 
 class App extends Component{
   render(){

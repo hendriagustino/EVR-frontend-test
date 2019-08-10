@@ -5,9 +5,20 @@ import ProductsHeader from './ProductsHeader/ProductsHeader';
 import ProductsFooter from './ProductsFooter/ProductsFooter';
 
 import {connect} from 'react-redux';
+import {Confirmation} from './../UI/Confirmation/Confirmation';
+
+import * as actions from './../../store/actions/index';
 
 class Products extends Component{
   
+  deleteProduct = (id) =>{
+    Confirmation("Apakah anda yakin untuk menghapus produk ini?")
+    .then(
+      ()=>{this.props.deleteProduct(id)},
+      ()=>{}
+    );
+  }
+
   render(){
 
     const data = {
@@ -35,12 +46,7 @@ class Products extends Component{
     return(
       <Container>
           <ProductsHeader/>
-          <MDBDataTable
-            striped
-            bordered
-            hover
-            data={data}
-          />
+          <MDBDataTable striped bordered hover data={data} />
           <ProductsFooter/>
       </Container>
     );
@@ -56,7 +62,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch =>{
   return {
-
+    deleteProduct : (id)=> dispatch(actions.deleteProduct(id))
   }
 };
 
