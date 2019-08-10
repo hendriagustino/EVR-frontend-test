@@ -2,11 +2,17 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { MDBDataTable, MDBBtn } from 'mdbreact';
 import {Container} from 'reactstrap';
+import {Confirmation} from './../UI/Confirmation/Confirmation';
+import * as actions from './../../store/actions/index';
 
 class Seller extends Component {
 
-    componentDidMount(){
-        console.log('batee',this.props.seller);
+    deleteSeller = (id) =>{
+        Confirmation("Apakah anda yakin untuk menghapus penjual?")
+        .then(
+            ()=>{this.props.deleteSeller(id)},
+            ()=>{}
+        );
     }
 
     render(){
@@ -55,7 +61,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch =>{
   return {
-
+      deleteSeller : (id) => dispatch(actions.deleteSeller(id))
   }
 };
 
