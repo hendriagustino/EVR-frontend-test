@@ -2,6 +2,14 @@
 
 evr_codingchallenge is basically a coding challenge project where I build the frontend of a simple single page application based on dummy data(s) to show Seller and Products that are sold on the platform. Both pages enable users to either Sort, Search function across all columns of the table, and Delete function for table's datas.
 
+# Snapshots of Web App 
+## Dashboard Page
+![Dashboard.png](images/Dashboard.png)
+
+## Products Page
+![Products_Page.png](images/Products_Page.png)
+
+
 ## REQUIREMENTS
 
 For development, you will need to install `Node.js` on your environment.
